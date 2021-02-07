@@ -170,6 +170,10 @@ func (b *Bmatrix) Send(msg config.Message) (string, error) {
 
 	// Upload a file if it exists
 	if msg.Extra != nil {
+		// check if we have files to upload (from slack, telegram or mattermost)
+		if len(msg.Extra["file"]) > 0 {
+			return b.handleUploadFiles(&msg, channel)
+		}
 		for _, rmsg := range helper.HandleExtra(&msg, b.General) {
 			rmsg := rmsg
 
@@ -181,10 +185,6 @@ func (b *Bmatrix) Send(msg config.Message) (string, error) {
 			if err != nil {
 				b.Log.Errorf("sendText failed: %s", err)
 			}
-		}
-		// check if we have files to upload (from slack, telegram or mattermost)
-		if len(msg.Extra["file"]) > 0 {
-			return b.handleUploadFiles(&msg, channel)
 		}
 	}
 
