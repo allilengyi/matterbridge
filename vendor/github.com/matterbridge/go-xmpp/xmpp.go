@@ -889,9 +889,9 @@ func (c *Client) SendOOB(chat Chat) (n int, err error) {
 		oobtext += `</x>`
 	}
 	
-	stanza := "<message to='%s' type='%s' xml:lang='en'> <body>xmlEscape(chat.Ooburl)</body>" + oobtext + thdtext + "</message>"
+	stanza := "<message to='%s' type='%s' id='%s' xml:lang='en'> <body>xmlEscape(chat.Ooburl)</body>" + oobtext + thdtext + "</message>"
 	
-	return fmt.Fprintf(c.conn, stanza, xmlEscape(chat.Remote), xmlEscape(chat.Type))
+	return fmt.Fprintf(c.conn, stanza, xmlEscape(chat.Remote), xmlEscape(chat.Type),cnonce())
 }
 
 // SendOrg sends the original text without being wrapped in an XMPP message stanza.
