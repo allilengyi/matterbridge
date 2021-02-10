@@ -6,8 +6,8 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/42wim/matterbridge/bridge/config"
-	"github.com/42wim/matterbridge/gateway/bridgemap"
+	"github.com/allilengyi/matterbridge/bridge/config"
+	"github.com/allilengyi/matterbridge/gateway/bridgemap"
 	"github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/suite"
@@ -18,7 +18,7 @@ var testconfig = []byte(`
 server=""
 [mattermost.test]
 server=""
-[gitter.42wim]
+[gitter.allilengyi]
 server=""
 [discord.test]
 server=""
@@ -34,8 +34,8 @@ server=""
     channel = "#wimtesting"
     
     [[gateway.inout]]
-    account="gitter.42wim"
-    channel="42wim/testroom"
+    account="gitter.allilengyi"
+    channel="allilengyi/testroom"
     #channel="matterbridge/Lobby"
 
     [[gateway.inout]]
@@ -52,7 +52,7 @@ var testconfig2 = []byte(`
 server=""
 [mattermost.test]
 server=""
-[gitter.42wim]
+[gitter.allilengyi]
 server=""
 [discord.test]
 server=""
@@ -68,8 +68,8 @@ server=""
     channel = "#wimtesting"
     
     [[gateway.in]]
-    account="gitter.42wim"
-    channel="42wim/testroom"
+    account="gitter.allilengyi"
+    channel="allilengyi/testroom"
 
     [[gateway.inout]]
     account = "discord.test"
@@ -87,8 +87,8 @@ server=""
     channel = "#wimtesting2"
     
     [[gateway.out]]
-    account="gitter.42wim"
-    channel="42wim/testroom"
+    account="gitter.allilengyi"
+    channel="allilengyi/testroom"
 
     [[gateway.out]]
     account = "discord.test"
@@ -196,19 +196,19 @@ func TestNewRouter(t *testing.T) {
 	assert.Equal(t, 4, len(r.Gateways["bridge1"].Channels))
 	assert.Equal(t, 3, len(r.Gateways["bridge2"].Channels))
 	assert.Equal(t, &config.ChannelInfo{
-		Name:        "42wim/testroom",
+		Name:        "allilengyi/testroom",
 		Direction:   "out",
-		ID:          "42wim/testroomgitter.42wim",
-		Account:     "gitter.42wim",
+		ID:          "allilengyi/testroomgitter.allilengyi",
+		Account:     "gitter.allilengyi",
 		SameChannel: map[string]bool{"bridge2": false},
-	}, r.Gateways["bridge2"].Channels["42wim/testroomgitter.42wim"])
+	}, r.Gateways["bridge2"].Channels["allilengyi/testroomgitter.allilengyi"])
 	assert.Equal(t, &config.ChannelInfo{
-		Name:        "42wim/testroom",
+		Name:        "allilengyi/testroom",
 		Direction:   "in",
-		ID:          "42wim/testroomgitter.42wim",
-		Account:     "gitter.42wim",
+		ID:          "allilengyi/testroomgitter.allilengyi",
+		Account:     "gitter.allilengyi",
 		SameChannel: map[string]bool{"bridge1": false},
-	}, r.Gateways["bridge1"].Channels["42wim/testroomgitter.42wim"])
+	}, r.Gateways["bridge1"].Channels["allilengyi/testroomgitter.allilengyi"])
 	assert.Equal(t, &config.ChannelInfo{
 		Name:        "general",
 		Direction:   "inout",
@@ -241,7 +241,7 @@ func TestGetDestChannel(t *testing.T) {
 				SameChannel: map[string]bool{"bridge1": false},
 				Options:     config.ChannelOptions{Key: ""},
 			}}, r.Gateways["bridge1"].getDestChannel(msg, *br))
-		case "gitter.42wim":
+		case "gitter.allilengyi":
 			assert.Equal(t, []config.ChannelInfo(nil), r.Gateways["bridge1"].getDestChannel(msg, *br))
 		case "irc.freenode":
 			assert.Equal(t, []config.ChannelInfo(nil), r.Gateways["bridge1"].getDestChannel(msg, *br))

@@ -1,6 +1,6 @@
-# github.com/42wim/go-gitter v0.0.0-20170828205020-017310c2d557
+# github.com/allilengyi/go-gitter v0.0.0-20170828205020-017310c2d557
 ## explicit
-github.com/42wim/go-gitter
+github.com/allilengyi/go-gitter
 # github.com/Baozisoftware/qrcode-terminal-go v0.0.0-20170407111555-c0650d8dff0f
 ## explicit
 github.com/Baozisoftware/qrcode-terminal-go

@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/42wim/go-gitter"
-	"github.com/42wim/matterbridge/bridge"
-	"github.com/42wim/matterbridge/bridge/config"
-	"github.com/42wim/matterbridge/bridge/helper"
+	"github.com/allilengyi/go-gitter"
+	"github.com/allilengyi/matterbridge/bridge"
+	"github.com/allilengyi/matterbridge/bridge/config"
+	"github.com/allilengyi/matterbridge/bridge/helper"
 )
 
 type Bgitter struct {
