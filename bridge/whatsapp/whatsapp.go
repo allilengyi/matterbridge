@@ -12,8 +12,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/allilengyi/matterbridge/bridge"
-	"github.com/allilengyi/matterbridge/bridge/config"
+	"github.com/42wim/matterbridge/bridge"
+	"github.com/42wim/matterbridge/bridge/config"
 	"github.com/Rhymen/go-whatsapp"
 )
 
@@ -165,7 +165,7 @@ func (b *Bwhatsapp) Disconnect() error {
 
 // JoinChannel Join a WhatsApp group specified in gateway config as channel='number-id@g.us' or channel='Channel name'
 // Required implementation of the Bridger interface
-// https://github.com/allilengyi/matterbridge/blob/2cfd880cdb0df29771bf8f31df8d990ab897889d/bridge/bridge.go#L11-L16
+// https://github.com/42wim/matterbridge/blob/2cfd880cdb0df29771bf8f31df8d990ab897889d/bridge/bridge.go#L11-L16
 func (b *Bwhatsapp) JoinChannel(channel config.ChannelInfo) error {
 	byJid := isGroupJid(channel.Name)
 
@@ -272,7 +272,7 @@ func (b *Bwhatsapp) PostImageMessage(msg config.Message, filetype string) (strin
 
 // Send a message from the bridge to WhatsApp
 // Required implementation of the Bridger interface
-// https://github.com/allilengyi/matterbridge/blob/2cfd880cdb0df29771bf8f31df8d990ab897889d/bridge/bridge.go#L11-L16
+// https://github.com/42wim/matterbridge/blob/2cfd880cdb0df29771bf8f31df8d990ab897889d/bridge/bridge.go#L11-L16
 func (b *Bwhatsapp) Send(msg config.Message) (string, error) {
 	b.Log.Debugf("=> Receiving %#v", msg)
 

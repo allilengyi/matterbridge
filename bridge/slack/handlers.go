@@ -6,8 +6,8 @@ import (
 	"html"
 	"time"
 
-	"github.com/allilengyi/matterbridge/bridge/config"
-	"github.com/allilengyi/matterbridge/bridge/helper"
+	"github.com/42wim/matterbridge/bridge/config"
+	"github.com/42wim/matterbridge/bridge/helper"
 	"github.com/slack-go/slack"
 )
 

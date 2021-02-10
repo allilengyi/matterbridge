@@ -3,7 +3,7 @@
 package bridgemap
 
 import (
-	bxmpp "github.com/allilengyi/matterbridge/bridge/xmpp"
+	bxmpp "github.com/42wim/matterbridge/bridge/xmpp"
 )
 
 func init() {

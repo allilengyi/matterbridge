@@ -1,7 +1,7 @@
 package brocketchat
 
 import (
-	"github.com/allilengyi/matterbridge/bridge/config"
+	"github.com/42wim/matterbridge/bridge/config"
 	"github.com/matterbridge/Rocket.Chat.Go.SDK/models"
 )
 

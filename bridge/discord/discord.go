@@ -6,10 +6,10 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/allilengyi/matterbridge/bridge"
-	"github.com/allilengyi/matterbridge/bridge/config"
-	"github.com/allilengyi/matterbridge/bridge/discord/transmitter"
-	"github.com/allilengyi/matterbridge/bridge/helper"
+	"github.com/42wim/matterbridge/bridge"
+	"github.com/42wim/matterbridge/bridge/config"
+	"github.com/42wim/matterbridge/bridge/discord/transmitter"
+	"github.com/42wim/matterbridge/bridge/helper"
 	"github.com/matterbridge/discordgo"
 )
 

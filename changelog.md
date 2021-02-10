@@ -28,7 +28,7 @@ This release couldn't exist without the following contributors:
 - discord: Remove WebhookURL support (discord) (#1323)
 
 `WebhookURL` global setting for discord is removed and will quit matterbridge.
-New `AutoWebhooks=true` setting, which will automatically use (and create, if they do not exist) webhooks inside specific channels. This only works if the bot has Manage Webhooks permission in bridged channels (global permission or as a channel permission override). Backwards compatibility with channel-specific webhooks. More info [here](https://github.com/allilengyi/matterbridge/blob/master/matterbridge.toml.sample#L862). 
+New `AutoWebhooks=true` setting, which will automatically use (and create, if they do not exist) webhooks inside specific channels. This only works if the bot has Manage Webhooks permission in bridged channels (global permission or as a channel permission override). Backwards compatibility with channel-specific webhooks. More info [here](https://github.com/42wim/matterbridge/blob/master/matterbridge.toml.sample#L862). 
 
 ## New features
 
@@ -72,9 +72,9 @@ This release couldn't exist without the following contributors:
 ## Breaking
 
 - matrix: Send the display name instead of the user name (matrix) (#1282)  
-  Matrix now sends the displayname if set instead of the username. If you want to keep the username, add  `UseUsername=true` to your matrix config. <https://github.com/allilengyi/matterbridge/wiki/Settings#useusername-1>
+  Matrix now sends the displayname if set instead of the username. If you want to keep the username, add  `UseUsername=true` to your matrix config. <https://github.com/42wim/matterbridge/wiki/Settings#useusername-1>
 - discord: Disable webhook editing (discord) (#1296)  
-  Because of issues with ratelimiting of webhook editing, this feature is now disabled. If you have multiple discord channels you bridge, you'll need to add a `webhookURL` to the `[gateway.inout.options]`. See <https://github.com/allilengyi/matterbridge/blob/master/matterbridge.toml.sample#L1864-L1870> for an example.
+  Because of issues with ratelimiting of webhook editing, this feature is now disabled. If you have multiple discord channels you bridge, you'll need to add a `webhookURL` to the `[gateway.inout.options]`. See <https://github.com/42wim/matterbridge/blob/master/matterbridge.toml.sample#L1864-L1870> for an example.
 
 ## New features
 
@@ -109,7 +109,7 @@ This release couldn't exist without the following contributors:
 - whatsapp: Add username for images from WhatsApp (#1232)
 
 This release couldn't exist without the following contributors:
-@Dellle, @allilengyi, @gary-kim, @s3lph, @BenWiederhake
+@Dellle, @42wim, @gary-kim, @s3lph, @BenWiederhake
 
 # v1.18.3
 
@@ -129,7 +129,7 @@ This release couldn't exist without the following contributors:
 - nctalk: Fix message replays #1220
 
 This release couldn't exist without the following contributors:
-@gary-kim, @tilosp, @NikkyAI, @escoand, @allilengyi
+@gary-kim, @tilosp, @NikkyAI, @escoand, @42wim
 
 # v1.18.2
 
@@ -139,13 +139,13 @@ This release couldn't exist without the following contributors:
 - whatsapp: Update whatsapp vendor and fix a panic (#1209)
 
 This release couldn't exist without the following contributors:
-@SuperSandro2000, @allilengyi
+@SuperSandro2000, @42wim
 
 # v1.18.1
 
 ## New features
 
-- telegram: Support Telegram animated stickers (tgs) format (#1173). See https://github.com/allilengyi/matterbridge/wiki/Settings#mediaConverttgs for more info
+- telegram: Support Telegram animated stickers (tgs) format (#1173). See https://github.com/42wim/matterbridge/wiki/Settings#mediaConverttgs for more info
 
 ## Enhancements
 
@@ -159,7 +159,7 @@ This release couldn't exist without the following contributors:
 - matrix: Sleep when ratelimited on joins (matrix). Fixes #1201 (#1206)
 
 This release couldn't exist without the following contributors:
-@allilengyi, @BenWiederhake, @Dellle, @gary-kim
+@42wim, @BenWiederhake, @Dellle, @gary-kim
 
 # v1.18.0
 
@@ -185,7 +185,7 @@ This release couldn't exist without the following contributors:
 Discord users are encouraged to upgrade, this release works with the move to the discord.com domain.
 
 This release couldn't exist without the following contributors:
-@allilengyi, @jlu5, @qaisjp, @TheHolyRoger, @SuperSandro2000, @gary-kim, @z3bra, @greenx, @haykam821, @nathanaelhoun
+@42wim, @jlu5, @qaisjp, @TheHolyRoger, @SuperSandro2000, @gary-kim, @z3bra, @greenx, @haykam821, @nathanaelhoun
 
 # v1.17.5
 
@@ -209,7 +209,7 @@ This release couldn't exist without the following contributors:
 - xmpp: Prevent re-requesting avatar data (xmpp) (#1117)
 
 This release couldn't exist without the following contributors:
-@qaisjp, @xnaas, @allilengyi, @Polynomdivision, @tfve
+@qaisjp, @xnaas, @42wim, @Polynomdivision, @tfve
 
 # v1.17.4
 
@@ -237,7 +237,7 @@ This release couldn't exist without the following contributors:
 - irc: Add extra space before colon in attachments (irc). Fixes #1089 (#1101)
 
 This release couldn't exist without the following contributors:
-@allilengyi, @ldruschk, @qaisjp, @Polynomdivision
+@42wim, @ldruschk, @qaisjp, @Polynomdivision
 
 # v1.17.2
 
@@ -253,7 +253,7 @@ This release couldn't exist without the following contributors:
 - whatsapp: Reset start timestamp on reconnect (whatsapp). Fixes #1059 (#1064)
 
 This release couldn't exist without the following contributors:
-@allilengyi, @jheiselman
+@42wim, @jheiselman
 
 # v1.17.1
 
@@ -270,14 +270,14 @@ This release couldn't exist without the following contributors:
 - whatsapp: Update client version whatsapp. Fixes #1061 #1062
 
 This release couldn't exist without the following contributors:
-@awigen, @qaisjp, @allilengyi
+@awigen, @qaisjp, @42wim
 
 # v1.17.0
 
 ## New features
 
 - msteams: new protocol added. Add initial Microsoft Teams support #967
-  See https://github.com/allilengyi/matterbridge/wiki/MS-Teams-setup for a complete walkthrough
+  See https://github.com/42wim/matterbridge/wiki/MS-Teams-setup for a complete walkthrough
 - discord: Add ability to procure avatars from the destination bridge #1000
 - matrix: Add support for avatars from matrix. #1007
 - general: support JSON and YAML config formats #1045
@@ -305,7 +305,7 @@ This release couldn't exist without the following contributors:
 - telegram: Make avatars download work with mediaserverdownload (telegram). Fixes #920 
 
 This release couldn't exist without the following contributors:
-@qaisjp, @jakubgs, @burner1024, @notpushkin, @MartijnBraam, @allilengyi
+@qaisjp, @jakubgs, @burner1024, @notpushkin, @MartijnBraam, @42wim
 
 # v1.16.5
 
@@ -335,7 +335,7 @@ This release couldn't exist without the following contributors:
 - sshchat: Fix duplicated messages (sshchat). Fixes #950 (#996)
 
 This release couldn't exist without the following contributors:
-@jwflory, @allilengyi, @pbek, @Humorhenker, @c0ncord2, @glazzara
+@jwflory, @42wim, @pbek, @Humorhenker, @c0ncord2, @glazzara
 
 # v1.16.3
 
@@ -361,7 +361,7 @@ This release couldn't exist without the following contributors:
 - slack: Fix issues with the slack block kit API #937 (#943).
 
 This release couldn't exist without the following contributors:
-@allilengyi, @bmpickford, @goncalor
+@42wim, @bmpickford, @goncalor
 
 # v1.16.1
 
@@ -386,7 +386,7 @@ This release couldn't exist without the following contributors:
 * matrix: fix corrupted links between slack and matrix #924
 
 This release couldn't exist without the following contributors:
-@qaisjp, @hramrach, @allilengyi
+@qaisjp, @hramrach, @42wim
 
 # v1.16.0
 
@@ -406,7 +406,7 @@ This release couldn't exist without the following contributors:
 * mattermost: Make getChannelIdTeam behave like GetChannelId for groups (mattermost) #873
 
 This release couldn't exist without the following contributors:
-@hyperobject, @allilengyi, @bucko909, @MOZGIII
+@hyperobject, @42wim, @bucko909, @MOZGIII
 
 # v1.15.1
 
@@ -425,25 +425,25 @@ This release couldn't exist without the following contributors:
 * telegram: fix panic in handleEntities #858
 
 This release couldn't exist without the following contributors:
-@allilengyi, @qaisjp, @joohoi
+@42wim, @qaisjp, @joohoi
 
 # v1.15.0
 ## New features
 * Add scripting (tengo) support for every outgoing message (#806)
-  See https://github.com/allilengyi/matterbridge/wiki/Settings#tengo and 
-  https://github.com/allilengyi/matterbridge/wiki/Settings#outmessage for more information
+  See https://github.com/42wim/matterbridge/wiki/Settings#tengo and 
+  https://github.com/42wim/matterbridge/wiki/Settings#outmessage for more information
 * Add tengo support to RemoteNickFormat (#793)
-  See https://github.com/allilengyi/matterbridge/wiki/Settings#remotenickformat-2
+  See https://github.com/42wim/matterbridge/wiki/Settings#remotenickformat-2
   * Deprecated `Message` under `[tengo]` to `InMessage`
 
 ## Enhancements
   * general: Forward only user-typing messages if supported by protocol (#832)
-  * general: updated wiki with all possible settings: https://github.com/allilengyi/matterbridge/wiki/Settings
+  * general: updated wiki with all possible settings: https://github.com/42wim/matterbridge/wiki/Settings
   * tengo: Add msg event to tengo
   * xmpp: Verify TLS against JID domain, not the host. (xmpp) (#834)
   * xmpp: Allow messages with timestamp (xmpp). Fixes #835 (#847)
   * irc: Add verbose IRC joins/parts (ident@host) (#805)
-  See https://github.com/allilengyi/matterbridge/wiki/Settings#verbosejoinpart
+  See https://github.com/42wim/matterbridge/wiki/Settings#verbosejoinpart
   * rocketchat: Add useraction support (rocketchat). Closes #772 (#794)
 
 ## Bugfix
@@ -453,7 +453,7 @@ This release couldn't exist without the following contributors:
 * mattermost: Update channels of all teams (mattermost)
 
 This release couldn't exist without the following contributors:
-@allilengyi, @Helcaraxan, @chotaire, @qaisjp, @dajohi, @kousu
+@42wim, @Helcaraxan, @chotaire, @qaisjp, @dajohi, @kousu
 
 # v1.14.4
 
@@ -483,7 +483,7 @@ This release couldn't exist without the following contributors:
 
 ## Contributors
 This release couldn't exist without the following contributors:
-@allilengyi, @Helcaraxan, @dajohi
+@42wim, @Helcaraxan, @dajohi
 
 # v1.14.1
 ## Bugfix
@@ -595,9 +595,9 @@ This release fixes go modules issues because of https://github.com/labstack/echo
 
 ## Breaking changes
 The slack bridge has been split in a `slack-legacy` and `slack` bridge.
-If you're still using `legacy tokens` and want to keep using them you'll have to rename `slack` to `slack-legacy` in your configuration. See [wiki](https://github.com/allilengyi/matterbridge/wiki/Section-Slack-(basic)#legacy-configuration) for more information.
+If you're still using `legacy tokens` and want to keep using them you'll have to rename `slack` to `slack-legacy` in your configuration. See [wiki](https://github.com/42wim/matterbridge/wiki/Section-Slack-(basic)#legacy-configuration) for more information.
 
-To migrate to the new bot-token based setup you can follow the instructions [here](https://github.com/allilengyi/matterbridge/wiki/Slack-bot-setup).
+To migrate to the new bot-token based setup you can follow the instructions [here](https://github.com/42wim/matterbridge/wiki/Slack-bot-setup).
 
 Slack legacy tokens may be deprecated by Slack at short notice, so it is STRONGLY recommended to use a proper bot-token instead.
 
@@ -811,7 +811,7 @@ Special thanks to @Helcaraxan and @patcon for their work on improving/refactorin
 # v1.5.0
 ## New features
 * general: remote mediaserver support. See MediaServerDownload and MediaServerUpload in matterbridge.toml.sample
-  more information on https://github.com/allilengyi/matterbridge/wiki/Mediaserver-setup-%5Badvanced%5D
+  more information on https://github.com/42wim/matterbridge/wiki/Mediaserver-setup-%5Badvanced%5D
 * general: Add support for ReplaceNicks using regexp to replace nicks. Closes #269 (see matterbridge.toml.sample)
 * general: Add support for ReplaceMessages using regexp to replace messages. #269 (see matterbridge.toml.sample)
 * irc: Add MessageSplit option to split messages on MessageLength (irc). Closes #281
@@ -942,7 +942,7 @@ it will stop working. (see https://discordapp.com/developers/docs/reference)
 
 # v0.16.2
 ## New features
-* general: binary builds against latest commit are now available on https://bintray.com/allilengyi/nightly/Matterbridge/_latestVersion
+* general: binary builds against latest commit are now available on https://bintray.com/42wim/nightly/Matterbridge/_latestVersion
 
 ## Bugfix
 * slack: fix loop introduced by relaying message of other bots #219
@@ -1075,7 +1075,7 @@ it will stop working. (see https://discordapp.com/developers/docs/reference)
   Maximum length of message sent to irc server. If it exceeds <message clipped> will be add to the message.
 * irc: Add NOPINGNICK option. 
   The string "{NOPINGNICK}" (case sensitive) will be replaced by the actual nick / username, but with a ZWSP inside the nick, so the irc user with the same nick won't get pinged.   
-  See https://github.com/allilengyi/matterbridge/issues/175 for more information
+  See https://github.com/42wim/matterbridge/issues/175 for more information
 
 ## Bugfix
 * slack: Fix sending to different channels on same account (slack). Closes #177

@@ -6,9 +6,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/allilengyi/matterbridge/bridge"
-	"github.com/allilengyi/matterbridge/bridge/config"
-	"github.com/allilengyi/matterbridge/bridge/helper"
+	"github.com/42wim/matterbridge/bridge"
+	"github.com/42wim/matterbridge/bridge/config"
+	"github.com/42wim/matterbridge/bridge/helper"
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api"
 )
 
