@@ -889,7 +889,7 @@ func (c *Client) SendOOB(chat Chat) (n int, err error) {
 		oobtext += `</x>`
 	}
 	
-	stanza := "<message to='%s' type='%s' id='%s' xml:lang='en'> <body>xmlEscape(chat.Ooburl)</body>" + oobtext + thdtext + "</message>"
+	stanza := "<message to='%s' type='%s' id='%s' xml:lang='en'> <body>"+xmlEscape(chat.Ooburl)+"</body>" + oobtext + thdtext + "</message>"
 	
 	return fmt.Fprintf(c.conn, stanza, xmlEscape(chat.Remote), xmlEscape(chat.Type),cnonce())
 }
