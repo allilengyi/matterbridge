@@ -10,9 +10,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/42wim/matterbridge/bridge"
-	"github.com/42wim/matterbridge/bridge/config"
-	"github.com/42wim/matterbridge/bridge/helper"
+	"github.com/allilengyi/matterbridge/bridge"
+	"github.com/allilengyi/matterbridge/bridge/config"
+	"github.com/allilengyi/matterbridge/bridge/helper"
 	"github.com/jpillora/backoff"
 	"github.com/matterbridge/go-xmpp"
 	"github.com/rs/xid"

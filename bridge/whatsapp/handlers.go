@@ -6,8 +6,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/42wim/matterbridge/bridge/config"
-	"github.com/42wim/matterbridge/bridge/helper"
+	"github.com/allilengyi/matterbridge/bridge/config"
+	"github.com/allilengyi/matterbridge/bridge/helper"
 	"github.com/Rhymen/go-whatsapp"
 	"github.com/jpillora/backoff"
 )
@@ -22,8 +22,8 @@ Check:
 
 // HandleError received from WhatsApp
 func (b *Bwhatsapp) HandleError(err error) {
-	// ignore received invalid data errors. https://github.com/42wim/matterbridge/issues/843
-	// ignore tag 174 errors. https://github.com/42wim/matterbridge/issues/1094
+	// ignore received invalid data errors. https://github.com/allilengyi/matterbridge/issues/843
+	// ignore tag 174 errors. https://github.com/allilengyi/matterbridge/issues/1094
 	if strings.Contains(err.Error(), "error processing data: received invalid data") ||
 		strings.Contains(err.Error(), "invalid string with tag 174") {
 		return
@@ -170,7 +170,7 @@ func (b *Bwhatsapp) HandleImageMessage(message whatsapp.ImageMessage) {
 		return
 	}
 
-	// rename .jfif to .jpg https://github.com/42wim/matterbridge/issues/1292
+	// rename .jfif to .jpg https://github.com/allilengyi/matterbridge/issues/1292
 	if fileExt[0] == ".jfif" {
 		fileExt[0] = ".jpg"
 	}
