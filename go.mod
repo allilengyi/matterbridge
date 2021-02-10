@@ -1,7 +1,7 @@
 module github.com/allilengyi/matterbridge
 
 require (
-	github.com/allilengyi/go-gitter v0.0.0-20170828205020-017310c2d557
+	github.com/42wim/go-gitter v0.0.0-20170828205020-017310c2d557
 	github.com/Baozisoftware/qrcode-terminal-go v0.0.0-20170407111555-c0650d8dff0f
 	github.com/Philipp15b/go-steam v1.0.1-0.20200727090957-6ae9b3c0a560
 	github.com/Rhymen/go-whatsapp v0.1.2-0.20210126174449-3c094ebae0ce
