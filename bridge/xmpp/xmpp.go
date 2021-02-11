@@ -349,7 +349,7 @@ func (b *Bxmpp) handleUploadFile(msg *config.Message) error {
 			msg.Text += fileInfo.Comment + ": "
 		}
 		if fileInfo.URL != "" {
-//			msg.Text = fileInfo.URL
+//			msg.Text = "Hello World" + fileInfo.URL
 			if fileInfo.Comment != "" {
 //				msg.Text = fileInfo.Comment + ": " + fileInfo.URL
 				urlDesc = fileInfo.Comment
