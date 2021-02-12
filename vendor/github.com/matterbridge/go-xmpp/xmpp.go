@@ -875,7 +875,7 @@ func (c *Client) Send(chat Chat) (n int, err error) {
 	return fmt.Fprintf(c.conn, stanza, xmlEscape(chat.Remote), xmlEscape(chat.Type), xmlEscape(chat.Text))
 }
 
-// SendOOB sends OOB data wrapped inside an XMPP message stanza, without actual body.
+// SendOOB sends OOB data wrapped inside an XMPP message stanza, with actual body to trigger inline download for modern XMPP clients
 func (c *Client) SendOOB(chat Chat) (n int, err error) {
 	var thdtext, oobtext string
 	if chat.Thread != `` {
