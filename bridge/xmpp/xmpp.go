@@ -349,13 +349,10 @@ func (b *Bxmpp) handleUploadFile(msg *config.Message) error {
 			msg.Text += fileInfo.Comment + ": "
 		}
 		if fileInfo.URL != "" {
-//			msg.Text = "Hello World" + fileInfo.URL
 			if fileInfo.Comment != "" {
-//				msg.Text = fileInfo.Comment + ": " + fileInfo.URL
+				msg.Text += "Hello World: "
 				urlDesc = fileInfo.Comment
 			}
-//		}
-//		if fileInfo.URL != "" {
 			if _, err := b.xc.SendOOB(xmpp.Chat{
 				Type:    "groupchat",
 				Remote:  msg.Channel + "@" + b.GetString("Muc"),
